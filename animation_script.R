@@ -63,7 +63,7 @@ ggplot(
       size = popsize, 
       # color = State,
       label = State)) + 
-  geom_point(alpha = 0.5, color = 'yellow2') + 
+  geom_point(alpha = 0.5, color = 'red') + 
   geom_text_repel(size=4, color = 'white') + 
   cowplot::theme_cowplot() + 
   scale_size_continuous(
@@ -78,7 +78,7 @@ ggplot(
     label = F,
     fill = F
   ) + 
-  theme(plot.background = element_rect(fill = 'grey20'), 
+  theme(plot.background = element_rect(fill = 'black'), 
   plot.title = element_text(color = 'white'),
   axis.title.x = element_text(color = 'white'),
   axis.title.y = element_text(color = 'white'),
@@ -114,7 +114,7 @@ animation <- ggplot(
       y = confirmed / popsize * 1e5, 
       size = popsize, 
       label = State)) + 
-  geom_point(alpha = 0.5, color = 'yellow2') + 
+  geom_point(alpha = 0.5, color = 'red') + 
   geom_text_repel(size=4.5, color = 'white') + 
   cowplot::theme_cowplot() + 
   scale_size_continuous(
@@ -129,7 +129,7 @@ animation <- ggplot(
     label = F,
     fill = F
   ) + 
-  theme(plot.background = element_rect(fill = 'grey20'), 
+  theme(plot.background = element_rect(fill = 'black'), 
   plot.title = element_text(color = 'white'),
   axis.title.x = element_text(color = 'white'),
   axis.title.y = element_text(color = 'white'),
