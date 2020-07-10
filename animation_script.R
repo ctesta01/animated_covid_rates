@@ -64,7 +64,7 @@ ggplot(
       # color = State,
       label = State)) + 
   geom_point(alpha = 0.5, color = 'red') + 
-  geom_text_repel(size=3, color = 'red') + 
+  geom_text_repel(size=4, color = 'white') + 
   cowplot::theme_cowplot() + 
   scale_size_continuous(
     range = c(1,20), 
@@ -115,7 +115,7 @@ animation <- ggplot(
       size = popsize, 
       label = State)) + 
   geom_point(alpha = 0.5, color = 'red') + 
-  geom_text_repel(size=3, color = 'red') + 
+  geom_text_repel(size=4.5, color = 'white') + 
   cowplot::theme_cowplot() + 
   scale_size_continuous(
     range = c(1,20), 
