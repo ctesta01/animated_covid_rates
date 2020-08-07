@@ -115,7 +115,7 @@ animation <- ggplot(
       size = popsize, 
       label = State)) + 
   geom_point(alpha = 0.5, color = 'red') + 
-  geom_text_repel(size=4.5, color = 'white') + 
+  geom_text_repel(size=5, color = 'white') + 
   cowplot::theme_cowplot() + 
   scale_size_continuous(
     range = c(1,20), 
@@ -156,7 +156,14 @@ animation <- ggplot(
   transition_time(date)
 
 animate(animation, 
-  height = 800, width = 1200, end_pause=20, fps=2,
+  height = 800, width = 1000, end_pause=20, fps=3,
+  nframes=
+    as.integer(max(state_df$date) - min(state_df$date)) + 21
+   )
+anim_save("covid19_cumulative_cases_and_deaths_animated_small.gif")
+
+animate(animation, 
+  height = 800, width = 1200, end_pause=20, fps=3,
   nframes=
     as.integer(max(state_df$date) - min(state_df$date)) + 21
    )
